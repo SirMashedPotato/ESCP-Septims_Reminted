@@ -11,6 +11,9 @@
 			<li>FueledSmithy</li>
 			<li>ElectricSmithy</li>
 			<li MayRequire="DankPyon.Medieval.Overhaul">FueledSmithy</li>
+			<li MayRequire="SirMashedPotato.MorrowRim.TelvanniTechnology">MorrowRim_TelvanniForge</li>
+			<li MayRequire="SirMashedPotato.MorrowRim.DunmerArmouryLite">MorrowRim_Dunmer_DunmerForgeFuelled</li>
+			<li MayRequire="SirMashedPotato.MorrowRim.DunmerArmouryLite">MorrowRim_Dunmer_DunmerForgeElectric</li>
 		</recipeUsers>
 	</RecipeDef>
 	<!-- ==========[ESCP_Currency_MeltingRecipe_SeptimToGold]========== -->
