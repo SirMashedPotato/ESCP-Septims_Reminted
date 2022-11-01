@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<label>Septims are called Drakes:</label>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="ESCP_CurrencySeptim"]/label</xpath>
+				<value>
+					<label>drake</label>
+				</value>
+			</li>
+			<!-- Recipe base -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[@Name="ESCP_Currency_MeltingRecipe_Base"]/jobString</xpath>
+				<value>
+					<jobString>Melting drakes.</jobString>
+				</value>
+			</li>
+			<!-- Recipe 1x -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="ESCP_Currency_MeltingRecipe_SeptimToGold"]/label</xpath>
+				<value>
+					<label>melt drakes</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="ESCP_Currency_MeltingRecipe_SeptimToGold"]/description</xpath>
+				<value>
+					<description>Melt down 10 drakes into 1 piece of gold.</description>
+				</value>
+			</li>
+			<!-- Recipe 4x -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="ESCP_Currency_MeltingRecipe_SeptimToGoldXFour"]/label</xpath>
+				<value>
+					<label>melt drakes x4</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="ESCP_Currency_MeltingRecipe_SeptimToGoldXFour"]/description</xpath>
+				<value>
+					<description>Melt down 40 drakes into 4 piece of gold.</description>
+				</value>
+			</li>
+			<!-- Recipe 10x -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="ESCP_Currency_MeltingRecipe_SeptimToGoldXTen"]/label</xpath>
+				<value>
+					<label>melt drakes x10</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="ESCP_Currency_MeltingRecipe_SeptimToGoldXTen"]/description</xpath>
+				<value>
+					<description>Melt down 100 drakes into 10 piece of gold.</description>
+				</value>
+			</li>
+			<!-- Recipe 40x -->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="ESCP_Currency_MeltingRecipe_SeptimToGoldXFourty"]/label</xpath>
+				<value>
+					<label>melt drakes x40</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/RecipeDef[defName="ESCP_Currency_MeltingRecipe_SeptimToGoldXFourty"]/description</xpath>
+				<value>
+					<description>Melt down 400 drakes into 40 piece of gold.</description>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==========[Base]========== -->
+	<AchievementsExpanded.AchievementDef Name="ESCP_AchievementCurrencySeptim_Base" Abstract="True">
+		<bgtexPath>Achievements/ESCP_AchievementBackground</bgtexPath>
+		<tab>ESCP_AchievementsTab</tab>
+	</AchievementsExpanded.AchievementDef>
+	<!-- ==========[Collecting]========== -->
+	<AchievementsExpanded.AchievementDef ParentName="ESCP_AchievementCurrencySeptim_Base">
+		<defName>ESCP_AchievementCurrencySeptim_HundredMillion</defName>
+		<label>Enough to Build an Empire</label>
+		<description>Amass a total of 100 million septims</description>
+		<tracker Class="AchievementsExpanded.ItemTracker">
+			<def>ESCP_CurrencySeptim</def>
+			<count>100000000</count>
+		</tracker>
+		<texPath>Achievements/ESCP_AchievementCurrencySeptim_HundredMillion</texPath>
+		<points>100</points>
+	</AchievementsExpanded.AchievementDef>
+</Defs>

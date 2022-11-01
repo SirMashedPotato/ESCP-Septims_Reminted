@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XYRWZfzt62aILSoncRJUu30fU5WIwo7GP5G+ObiCnCU9xlRG3bREcIl85npgGAeZH+d9Z+8+sB+8NiKK/JnBqg==",
+  "success": true,
+  "projectFilePath": "J:\\Modding\\Github\\ESCP-Septims_Reminted\\1.4\\Source\\FalloutCurrencies\\FalloutCurrencies\\FalloutCurrencies.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\lib.harmony\\2.1.1\\lib.harmony.2.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
