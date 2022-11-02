@@ -14,7 +14,11 @@ namespace FalloutCurrencies_NonReplacement
             return def.GetModExtension<FactionCurrency>();
         }
     }
-
+    /// <summary>
+    /// Swaps the currency the trade uses
+    /// Without this the trade caravan will still generate with their custom currency,
+    /// however the actual trade will still use silver
+    /// </summary>
     [HarmonyPatch(typeof(TradeSession), "SetupWith")]
     public static class SetupWith_Patch
     {
@@ -31,7 +35,9 @@ namespace FalloutCurrencies_NonReplacement
             }
         }
     }
-
+    /// <summary>
+    /// Doesn't seem to actually ever be run
+    /// </summary>
     [HarmonyPatch(typeof(TradeSession), "Close")]
     public static class Close_Patch
     {
@@ -43,7 +49,11 @@ namespace FalloutCurrencies_NonReplacement
             }
         }
     }
-
+    /// <summary>
+    /// defaultCurrencyDef is always Silver
+    /// The if statement checks for if ___thingDef both is and isn't Silver, which will always fail
+    /// </summary>
+    /*
     [HarmonyPatch(typeof(StockGenerator_SingleDef), "HandlesThingDef")]
     public static class HandlesThingDef_Patch
     {
@@ -55,7 +65,12 @@ namespace FalloutCurrencies_NonReplacement
             }
         }
     }
-
+    */
+    /// <summary>
+    /// Replaces all instances of Silver with the factions specified currency
+    /// Obviously raises the issue that traders can never actually sell silver, 
+    /// as it will always be converted into their own currency
+    /// </summary>
     [HarmonyPatch(typeof(StockGenerator_SingleDef), "GenerateThings")]
     public static class GenerateThings_Patch
     {
@@ -103,7 +118,9 @@ namespace FalloutCurrencies_NonReplacement
         }
         public static void SwapCurrency(ThingDef newDef)
         {
+            Log.Message("Swapping silver to: " + newDef.label);
             ThingDefOf.Silver = newDef;
+            Log.Message("Silver is now: " + ThingDefOf.Silver.label);
         }
     }
 }
